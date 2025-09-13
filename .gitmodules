@@ -1,9 +1,9 @@
 [submodule "TranslatorJHU-Frontend"]
 	path = TranslatorJHU-Frontend
-	url = ./TranslatorJHU-Frontend
+	url = https://github.com/Natanel-solomonov/TranslatorJHU-Frontend.git
 	branch = main
 
 [submodule "TranslatorJHU-Backend"]
 	path = TranslatorJHU-Backend
-	url = ./TranslatorJHU-Backend
+	url = https://github.com/Natanel-solomonov/TranslatorJHU-Backend.git
 	branch = main

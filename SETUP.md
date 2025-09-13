@@ -65,11 +65,13 @@ npm run build:extension
 ### Google Cloud Setup
 
 1. **Create Project**:
+
    - Go to [Google Cloud Console](https://console.cloud.google.com/)
    - Create new project or select existing
    - Note the Project ID
 
 2. **Enable APIs**:
+
    ```bash
    gcloud services enable speech.googleapis.com
    ```
@@ -89,6 +91,7 @@ npm run build:extension
 ### TTS Provider Setup
 
 #### ElevenLabs (Recommended)
+
 1. Sign up at [ElevenLabs](https://elevenlabs.io/)
 2. Get API key from profile
 3. Choose voice ID from voice library
@@ -99,6 +102,7 @@ npm run build:extension
    ```
 
 #### Azure Neural TTS
+
 1. Create Azure Cognitive Services resource
 2. Get key and region
 3. Add to `.env`:
@@ -129,20 +133,24 @@ npm run build:extension
 ### Common Issues
 
 **"Backend disconnected"**
+
 - Check if backend server is running on port 8080
 - Verify WebSocket connection in browser console
 
 **"No meeting tabs detected"**
+
 - Ensure you're on a supported platform (Zoom/Meet/Teams)
 - Refresh the meeting page
 - Check extension permissions
 
 **"Audio capture failed"**
+
 - Allow microphone permissions in Chrome
 - Check if another app is using the microphone
 - Verify `tabCapture` permission is granted
 
 **"Translation errors"**
+
 - Verify Gemini API key is correct
 - Check API quotas and billing
 - Monitor backend logs for detailed errors
@@ -158,6 +166,7 @@ NODE_ENV=development
 ```
 
 View logs:
+
 ```bash
 cd TranslatorJHU-Backend
 npm run dev  # Watch console output
@@ -168,6 +177,7 @@ npm run dev  # Watch console output
 ### Backend Deployment
 
 **Google Cloud Run** (Recommended):
+
 ```bash
 cd TranslatorJHU-Backend
 npm run build
@@ -178,6 +188,7 @@ gcloud run deploy translator-jhu \
 ```
 
 **Docker**:
+
 ```bash
 cd TranslatorJHU-Backend
 docker build -t translator-jhu-backend .
@@ -187,11 +198,13 @@ docker run -p 8080:8080 --env-file .env translator-jhu-backend
 ### Extension Distribution
 
 **Chrome Web Store**:
+
 1. Package extension: `cd TranslatorJHU-Frontend && npm run build:extension`
 2. Create ZIP of `dist/` folder
 3. Upload to Chrome Web Store Developer Dashboard
 
 **Enterprise Deployment**:
+
 - Use Chrome Enterprise policies
 - Deploy via Google Admin Console
 - Configure force-install policies
@@ -248,6 +261,7 @@ curl http://localhost:8080/api/config
 ### Performance Monitoring
 
 Monitor key metrics:
+
 - Translation latency (target: <1s end-to-end)
 - Audio quality (confidence scores >0.8)
 - Error rates (<1% for production)
