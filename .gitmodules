@@ -1,0 +1,9 @@
+[submodule "TranslatorJHU-Frontend"]
+	path = TranslatorJHU-Frontend
+	url = ./TranslatorJHU-Frontend
+	branch = main
+
+[submodule "TranslatorJHU-Backend"]
+	path = TranslatorJHU-Backend
+	url = ./TranslatorJHU-Backend
+	branch = main
